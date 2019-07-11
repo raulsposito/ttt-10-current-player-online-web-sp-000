@@ -9,6 +9,14 @@ def turn_count(board)
 end
 
 def current_player(board)
+  turn_count(board)
+  counter = 0
+  board.each do |box|
+    if box == "X" || box == "O"
+      counter +=1
+    end
+  end
+  return counter
   if counter % 2 == 0
     then O
     elsif counter % 2 == 1
